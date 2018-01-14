@@ -1,0 +1,19 @@
+
+.console-row {
+    margin: 3px;
+}
+
+.command {
+    margin-top: 20px;
+}
+
+#output {
+    height: 300px;
+    overflow: auto;
+}
+
+#graph {
+    width: 100%;
+    min-height: 500px;
+    /*border: 1px solid grey;*/
+}

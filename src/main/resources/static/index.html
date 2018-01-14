@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<head>
+    <title>WebSocket Test</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container" role="main">
+    <div class="page-header">
+        <h1>Graph Explorer 2000</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Controls</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-info" id="connectBtn" onclick="connect()">Connect</button>
+                            <button class="btn btn-danger" id="disConnectBtn" onclick="disconnect()">Disconnect</button>
+                        </div>
+                    </div>
+                    <div class="row command">
+                        <div class="col-xs-12">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="command" placeholder="Enter command...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" onclick="sendCommand()">Send</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row command">
+                        <div class="col-xs-12">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="teleport" placeholder="Enter node name...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"
+                                            onclick="teleport()">Energize!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Console</h3>
+                </div>
+                <div class="panel-body" id="output"></div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Map</h3>
+                </div>
+                <div class="panel-body" id="graph"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script language="JavaScript" src="app.js"></script>
+<script language="JavaScript" src="graph.js"></script>
+</body>
